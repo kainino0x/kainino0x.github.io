@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kai Ninomiya</title>
+<meta charset="utf-8">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.closed').hide();
+
+    $('.toggler').click(function() {
+      // turns something into a toggle button magically
+      var tgt = $(this).attr('for');
+      $(tgt).toggle('blind');
+      return false;
+    });
+  });
+</script>
+
+<style type="text/css">
+@import url(normalize.css);
+
+body {
+  background-color: #1166bb;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  overflow-y: scroll;
+}
+#main {
+  margin: 1em auto;
+  width: 550px;
+  background-color: #aaddff;
+  /* border-radius: 3em; */ /* breaks things in IE(10) */
+}
+
+#bgimgbox {
+  background: url('img/bg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 1em;
+  padding-top: 2em;
+}
+
+#aboutbox {
+  padding: 1em;
+}
+
+.closed p:first-child {
+  /* Fixes the animation on the first paragraph */
+  margin-top: 0px;
+}
+
+.avatar {
+  display: block;
+  margin: auto auto;
+  border-radius: 32px;
+}
+
+.h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 300%;
+}
+.h2 {
+  text-align: center;
+  font-size: 150%;
+}
+.h3 {
+  text-align: center;
+  font-size: 120%;
+}
+.note {
+  text-align: center;
+  font-style: italic;
+}
+
+.large { font-size: 110%; }
+.small { font-size: 90%; }
+.italic { font-style: italic; }
+.caption {
+    font-style: italic;
+}
+
+.thumbtext {
+  clear: none;
+  height: 72px;
+}
+.thumb {
+  clear: right;
+  float: right;
+  height: 72px;
+}
+img {
+  border-radius: 8px;
+}
+
+.imgfit {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.toggler {
+  cursor: pointer;
+  color: #996600;
+}
+.toggler:hover {
+  text-decoration: underline;
+}
+
+a:link {
+  color: #996600;
+  text-decoration: none;
+}
+a:visited {
+  color: #884400;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+}
+
+strong {
+  font-weight: 400;
+  color: #277554;
+}
+</style>
+</head>
+
+<body>
+<div id="main">
+
+<div id="bgimgbox">
+
+<img class="avatar" src="img/kainino.thumb.jpg">
+
+<div class="h1">
+  Kai Ninomiya
+</div>
+
+<p class="note large">
+  &laquo;computer science undergrad/computer graphics grad &ndash;
+  <a href="http://www.upenn.edu/">
+    Penn</a>&raquo;
+  <br>
+  &laquo;co-sysadmin &ndash;
+  <a href="http://www.stwing.upenn.edu/">
+    STWing</a> residential program&raquo;
+  <!--
+  &laquo;RCTA research intern &ndash;
+  <a href="http://cg.cis.upenn.edu/current_projects.html">
+    SIG Center for Computer Graphics</a>&raquo;
+  <br>
+  &laquo;co-instructor &ndash;
+  <a href="http://seas.upenn.edu/~cis191/">
+    Linux/Unix Skills</a>&raquo;
+  <br>
+  &laquo;teaching assistant &ndash;
+  <a href="http://www.cis.upenn.edu/~cis277/current/">
+    Interactive Computer Graphics</a>&raquo;
+  -->
+  <br>
+  &laquo;intern, 3d graphics engine &ndash;
+  <a href="http://www.cesiumjs.org/">
+    Cesium</a>&raquo;
+</p>
+
+<p class="h2">
+  <a href="KaiNinomiya_resume.pdf">résumé (pdf)</a>
+</p>
+
+<p class="h3">
+  <a href="https://bitbucket.org/kainino/">bitbucket</a>
+  &middot;
+  <a href="https://github.com/kainino0x">github</a>
+</p>
+
+</div>
+
+<div id="aboutbox">
+
+<p class="h2">
+  <a class="toggler" for="#pub">publications</a>
+</p>
+
+<div class="closed" id="pub">
+  <p>
+    <strong>Ninomiya, K.</strong>, Kapadia, M., Shoulson, A., Garcia, F. and Badler, N.
+    &ldquo;Planning Approaches to Constraint-Aware Navigation in Dynamic Environments.&rdquo;
+    <em>Comp. Anim. Virtual Worlds</em>, 26: 119–139, 2015.
+  </p>
+  <p style="text-align: right;">
+    [<a href="PlanningApproaches.pdf">preprint</a>, 7.1 MB]
+    [doi: <a href="http://dx.doi.org/10.1002/cav.1622">10.1002/cav.1622</a>]
+  </p>
+  <p>
+    Kapadia, M., <strong>Ninomiya, K.</strong>, Shoulson, A., Garcia, F., and Badler, N.I.
+    &ldquo;Constraint-Aware Navigation in Dynamic Environments.&rdquo;
+    <em>ACM SIGGRAPH Conference on Motion in Games (MIG), 2013.</em>
+  </p>
+  <p style="text-align: right;">
+    [<a href="ConstraintAwareNavigation.pdf">paper</a>, 2.9 MB]
+    [<a href="ConstraintAwareNavigation.mp4">video</a>, 4:49, 30 MB]
+  </p>
+</div>
+
+<p class="h2">
+  about me
+</p>
+
+<div id="about">
+  <p>
+    I'm super-interested in computer science and physics,
+    especially graphics, hardware design, physical approaches to graphics,
+    and computational approaches to physics.
+  </p>
+  <p>
+    Despite being a very busy college student, I try to spend as much time as I
+    can doing the things I think are awesome, such as:
+  </p>
+  <ul>
+    <li>building cool physical things,</li>
+    <li>building cool software (see below),</li>
+    <li>helping other people and teaching them how to do things they think are
+      awesome,</li>
+    <li>and, occasionally, making things pretty.</li>
+  </ul>
+
+  <p class="h2">projects</p>
+
+  <ul>
+    <li>
+      <div class="toggler" for="#pathtracer">
+        <img class="thumb" src="img/thumb/pathtracer.jpg">
+        <div class="thumbtext">
+          A GPU pathtracer written in CUDA
+        </div>
+      </div>
+      <div class="closed" id="pathtracer">
+        <div class="caption">
+          <a href="https://github.com/kainino0x/Project3-Pathtracer">CIS 565 GPU Pathtracer</a> (Oct 2014, coursework)
+        </div>
+        <a href="img/pathtracer.jpg">
+          <img src="img/pathtracer.jpg" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#rusttrace">
+        <img class="thumb" src="img/thumb/rusttrace.jpg">
+        <div class="thumbtext">
+          A basic raytracer written in Rust
+        </div>
+      </div>
+      <div class="closed" id="rusttrace">
+        <div class="caption">
+          <a href="https://bitbucket.org/kainino/rusttrace">Rusttrace</a> (Summer 2014&ndash;intermittent, pair)
+        </div>
+        <a href="img/rusttrace.jpg">
+          <img src="img/rusttrace.jpg" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#smoke">
+        <img class="thumb" src="img/thumb/smoke.jpg">
+        <div class="thumbtext">
+          A smoke simulation
+        </div>
+      </div>
+      <div class="closed" id="smoke">
+        <div class="caption">
+          CIS 563 Smoke Simulation (Mar 2014, expanded coursework)
+          <br>
+          [videos:
+          <a href="smokesim_temp.mp4">initial temperature source</a> (13 MB),
+          <a href="smokesim_vel.mp4">initial velocity source</a> (14 MB)]
+        </div>
+        <a href="img/smoke.jpg">
+          <img src="img/smoke.jpg" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#volumetric">
+        <img class="thumb" src="img/thumb/volumetric.jpg">
+        <div class="thumbtext">
+          An extensible volumetric renderer
+        </div>
+      </div>
+      <div class="closed" id="volumetric">
+        <div class="caption">
+          CIS 560 Volumetric Renderer (Oct 2013, expanded coursework)
+        </div>
+        <a href="img/volumetric.jpg">
+          <img src="img/volumetric.jpg" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#invincible">
+        <img class="thumb" src="img/thumb/invincible.jpg">
+        <div class="thumbtext">
+          Invincible, a 2D phys-based cave exploration sim
+        </div>
+      </div>
+      <div class="closed" id="invincible">
+        <div class="caption">
+            <a href="invincible/">Invincible (Unity Web Player)</a> (March 2014, Penn Play Game Jam)
+        </div>
+        <a href="img/invincible.png">
+          <img src="img/invincible.png" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#golshader">
+        <img class="thumb" src="img/thumb/golshader.jpg">
+        <div class="thumbtext">
+          GoLShader, a GLSL Conway's game of life
+        </div>
+      </div>
+      <div class="closed" id="golshader">
+        <div class="caption">
+          GoLShader (Aug&ndash;Dec 2012, personal)
+        </div>
+        <a href="img/golshader.png">
+          <img src="img/golshader.png" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="toggler" for="#chickens">
+        <img class="thumb" src="img/thumb/chickens.jpg">
+        <div class="thumbtext">
+          Chickens, a networked platformer
+        </div>
+      </div>
+      <div class="closed" id="chickens">
+        <div class="caption">
+          Chickens + the EGGS GL GUI System (Jan 2011&ndash;intermittent, group)
+        </div>
+        <a href="img/chickens.png">
+          <img src="img/chickens.png" class="imgfit">
+        </a>
+      </div>
+    </li>
+    <li for="#witfell">
+      <div class="toggler" for="#witfell">
+        <img class="thumb" src="img/thumb/witfell.jpg">
+        <div class="thumbtext">
+          Witfell, a 4D board game
+        </div>
+      </div>
+      <div class="closed" id="witfell">
+        <div class="caption">
+          Witfell (May 2010&ndash;intermittent, group)
+        </div>
+        <a href="img/witfell.png">
+          <img src="img/witfell.png" class="imgfit">
+        </a>
+      </div>
+    </li>
+  </ul>
+
+  <p class="note small">
+    (updated February 2015)
+  </p>
+
+  <p class="note small"><tt>
+    <a href="kainino.gpg">
+      2CAC 493D 1FC8 B883 E984 &nbsp;A26A DA08 7B00 C36A 288F
+    </a>
+  </tt></p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
