@@ -4,6 +4,8 @@
 <title>Kai Ninomiya</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
 <link rel="icon" href="favicon.ico">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
@@ -28,17 +30,23 @@
 <style type="text/css">
 @import url(normalize.css);
 
-body {
+html {
   background-color: #1166bb;
+  margin: 1em 0em;
+}
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   overflow-y: scroll;
-}
-#main {
-  margin: 1em auto;
+  margin: 0em auto;
   width: 550px;
+}
+
+#main {
   background-color: #aaddff;
-  /* border-radius: 3em; */ /* breaks things in IE(10) */
+  border-radius: 1em; /* slightly breaks things in IE(10) */
+  overflow: hidden;
 }
 
 #bgimgbox {
@@ -46,8 +54,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #d2ecff;
-  padding: 1em;
-  padding-top: 2em;
+  padding: 2em 1em;
 }
 
 #aboutbox {
@@ -65,18 +72,22 @@ body {
   border-radius: 32px;
 }
 
-.h1 {
+h1 {
   text-align: center;
   font-weight: 300;
   font-size: 300%;
+  margin: 0;
 }
-.h2 {
+h2 {
   text-align: center;
   font-size: 150%;
+  font-weight: normal;
 }
-.h3 {
+h3 {
   text-align: center;
   font-size: 120%;
+  font-weight: normal;
+  margin: 0;
 }
 .note {
   text-align: center;
@@ -147,9 +158,7 @@ a:active {
 
 <img class="avatar" src="img/kainino.thumb.jpg">
 
-<div class="h1">
-  Kai Ninomiya
-</div>
+<h1>Kai Ninomiya</h1>
 
 <p class="note large">
   &laquo;computer science undergrad/grad &ndash;
@@ -178,23 +187,23 @@ a:active {
     Cesium.js</a>&raquo;
 </p>
 
-<p class="h2">
+<h2>
   <a href="KaiNinomiya_resume.pdf">résumé (pdf)</a>
-</p>
+</h2>
 
-<p class="h3">
+<h3>
   <a href="https://bitbucket.org/kainino/">bitbucket</a>
   &middot;
   <a href="https://github.com/kainino0x">github</a>
-</p>
+</h3>
 
 </div>
 
 <div id="aboutbox">
 
-<p class="h2">
+<h2>
   <a class="toggler" for="#pub">publications</a>
-</p>
+</h2>
 
 <div class="closed" id="pub">
   <p class="light">
@@ -227,9 +236,9 @@ a:active {
   </p>
 </div>
 
-<p class="h2">
+<h2>
   about me
-</p>
+</h2>
 
 <div id="about">
   <p>
@@ -249,7 +258,8 @@ a:active {
     <li>and, occasionally, making things pretty.</li>
   </ul>
 
-  <p class="h2">projects</p>
+  <h2>projects</h2>
+  <p style="text-align: center;">coursework + other</p>
 
   <ul>
     <li>
@@ -272,7 +282,7 @@ a:active {
       <div class="toggler" for="#rusttrace">
         <img class="thumb" src="img/thumb/rusttrace.jpg">
         <div class="thumbtext">
-          A raytracer with primitive photon mapping (written in Rust)
+          [Rust] A raytracer with primitive photon mapping
         </div>
       </div>
       <div class="closed" id="rusttrace">
@@ -288,7 +298,7 @@ a:active {
       <div class="toggler" for="#rspt">
         <img class="thumb" src="img/thumb/rspt.jpg">
         <div class="thumbtext">
-          A very small, very basic path tracer in the style of smallpt (written in Rust)
+          [Rust] A very small, very basic path tracer in the style of smallpt
         </div>
       </div>
       <div class="closed" id="rspt">
@@ -304,7 +314,7 @@ a:active {
       <div class="toggler" for="#pathtracer">
         <img class="thumb" src="img/thumb/pathtracer.jpg">
         <div class="thumbtext">
-          A GPU pathtracer written in CUDA
+          [CUDA] A GPU pathtracer
         </div>
       </div>
       <div class="closed" id="pathtracer">
@@ -419,7 +429,7 @@ a:active {
   </ul>
 
   <p class="note small">
-    (updated September 2015)
+    (updated November 2015)
   </p>
 
   <p class="note small"><tt>
