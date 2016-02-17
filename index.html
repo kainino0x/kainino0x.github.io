@@ -3,13 +3,13 @@
 <head>
 <title>Kai Ninomiya</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width">
 
 <link rel="icon" href="favicon.ico">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -20,7 +20,7 @@
 
     $('.toggler').click(function() {
       // turns something into a toggle button magically
-      var tgt = $(this).attr('for');
+      var tgt = $(this).attr('data-for');
       $(tgt).toggle('blind');
       return false;
     });
@@ -101,6 +101,11 @@ h3 {
 .caption {
     font-style: italic;
 }
+#gpg {
+  font-size: 80%;
+  color: #666;
+  text-align: center;
+}
 
 .thumbtext {
   clear: none;
@@ -118,6 +123,10 @@ img {
 .imgfit {
   max-width: 100%;
   max-height: 100%;
+}
+
+.block {
+  display: block;
 }
 
 .toggler:visited {
@@ -154,7 +163,7 @@ a:active {
 
 <div id="bgimgbox">
 
-<img class="avatar" src="img/kainino.thumb.jpg">
+<img alt="" class="avatar" src="img/kainino.thumb.jpg">
 
 <h1>Kai Ninomiya</h1>
 
@@ -204,7 +213,7 @@ a:active {
 <div id="aboutbox">
 
 <h2>
-  <a href class="toggler" for="#pub">publications</a>
+  <a href="javascript:;" class="toggler" data-for="#pub">publications</a>
 </h2>
 
 <div class="closed" id="pub">
@@ -265,80 +274,80 @@ a:active {
 
   <ul>
     <li>
-      <div><a href class="toggler" for="#deferred">
-        <img class="thumb" src="img/thumb/deferred.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#deferred">
+        <img alt="" class="thumb" src="img/thumb/deferred.jpg">
         <div class="thumbtext">
           A WebGL deferred shading renderer
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="deferred">
         <div class="caption">
           <a href="https://github.com/kainino0x/cis565-2015-webgl-deferred-shading">Deferred shading renderer</a>
           (Oct. 2015, created from scratch, to prepare course assignment base code)
         </div>
         <a href="http://kainino0x.github.io/cis565-2015-webgl-deferred-shading/">
-          <img src="img/deferred.jpg" class="imgfit">
+          <img alt="" src="img/deferred.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#rusttrace">
-        <img class="thumb" src="img/thumb/rusttrace.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#rusttrace">
+        <img alt="" class="thumb" src="img/thumb/rusttrace.jpg">
         <div class="thumbtext">
           [Rust] A raytracer with primitive photon mapping
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="rusttrace">
         <div class="caption">
           <a href="https://bitbucket.org/kainino/rusttrace">Rusttrace</a>
           (Summer 2014&ndash;intermittent, pair)
         </div>
         <a href="https://bitbucket.org/kainino/rusttrace">
-          <img src="img/rusttrace.jpg" class="imgfit">
+          <img alt="" src="img/rusttrace.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#rspt">
-        <img class="thumb" src="img/thumb/rspt.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#rspt">
+        <img alt="" class="thumb" src="img/thumb/rspt.jpg">
         <div class="thumbtext">
           [Rust] A very small, very basic path tracer in the style of smallpt
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="rspt">
         <div class="caption">
           <a href="https://github.com/kainino0x/rspt">rspt</a>
           (Aug.&ndash;Sep. 2015, solo)
         </div>
         <a href="https://github.com/kainino0x/rspt">
-          <img src="img/rspt.jpg" class="imgfit">
+          <img alt="" src="img/rspt.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#pathtracer">
-        <img class="thumb" src="img/thumb/pathtracer.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#pathtracer">
+        <img alt="" class="thumb" src="img/thumb/pathtracer.jpg">
         <div class="thumbtext">
           [CUDA] A GPU path tracer
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="pathtracer">
         <div class="caption">
           <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">CIS 565 GPU Path Tracer</a>
           (Oct. 2014, coursework)
         </div>
         <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">
-          <img src="img/pathtracer.jpg" class="imgfit">
+          <img alt="" src="img/pathtracer.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#smoke">
-        <img class="thumb" src="img/thumb/smoke.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#smoke">
+        <img alt="" class="thumb" src="img/thumb/smoke.jpg">
         <div class="thumbtext">
           A smoke simulator/renderer
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="smoke">
         <div class="caption">
           CIS 563 Smoke Simulation
@@ -349,52 +358,52 @@ a:active {
           <a href="http://www.stwing.upenn.edu/~kainino/smokesim_vel.mp4">initial velocity source</a> (14 MB)]
         </div>
         <a href="img/smoke.jpg">
-          <img src="img/smoke.jpg" class="imgfit">
+          <img alt="" src="img/smoke.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#volumetric">
-        <img class="thumb" src="img/thumb/volumetric.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#volumetric">
+        <img alt="" class="thumb" src="img/thumb/volumetric.jpg">
         <div class="thumbtext">
           A modular volumetric renderer
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="volumetric">
         <div class="caption">
           CIS 560 Volumetric Renderer
           (Oct. 2013, expanded coursework)
         </div>
         <a href="img/volumetric.jpg">
-          <img src="img/volumetric.jpg" class="imgfit">
+          <img alt="" src="img/volumetric.jpg" class="imgfit">
         </a>
       </div>
     </li>
     <li>
-      <div><a href class="toggler" for="#invincible">
-        <img class="thumb" src="img/thumb/invincible.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#invincible">
+        <img alt="" class="thumb" src="img/thumb/invincible.jpg">
         <div class="thumbtext">
           Invincible, a 2D phys-based cave exploration sim
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="invincible">
         <div class="caption">
             <a href="http://www.stwing.upenn.edu/~kainino/invincible/">Invincible (Unity Web Player)</a>
             (Mar. 2014, Penn Play Game Jam)
         </div>
         <a href="img/invincible.png">
-          <img src="img/invincible.png" class="imgfit">
+          <img alt="" src="img/invincible.png" class="imgfit">
         </a>
       </div>
     </li>
     <!--
     <li>
-      <div><a href class="toggler" for="#golshader">
-        <img class="thumb" src="img/thumb/golshader.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#golshader">
+        <img alt="" class="thumb" src="img/thumb/golshader.jpg">
         <div class="thumbtext">
             GoLShader, a GLSL Conway's game of life
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="golshader">
         <div class="caption">
           <a href="https://bitbucket.org/kainino/golshader">
@@ -403,55 +412,71 @@ a:active {
           (Aug.&ndash;Dec. 2012, personal)
         </div>
         <a href="https://bitbucket.org/kainino/golshader">
-          <img src="img/golshader.png" class="imgfit">
+          <img alt="" src="img/golshader.png" class="imgfit">
         </a>
       </div>
     </li>
     -->
     <li>
-      <div><a href class="toggler" for="#chickens">
-        <img class="thumb" src="img/thumb/chickens.jpg">
+      <a href="javascript:;" class="toggler block" data-for="#chickens">
+        <img alt="" class="thumb" src="img/thumb/chickens.jpg">
         <div class="thumbtext">
           Chickens, a networked platformer
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="chickens">
         <div class="caption">
           Chickens + the EGGS GL GUI System
           (Jan. 2011&ndash;Jan. 2014, group)
         </div>
         <a href="img/chickens.png">
-          <img src="img/chickens.png" class="imgfit">
+          <img alt="" src="img/chickens.png" class="imgfit">
         </a>
       </div>
     </li>
-    <li for="#witfell">
-      <div><a href class="toggler" for="#witfell">
-        <img class="thumb" src="img/thumb/witfell.jpg">
+    <li data-for="#witfell">
+      <a href="javascript:;" class="toggler block" data-for="#witfell">
+        <img alt="" class="thumb" src="img/thumb/witfell.jpg">
         <div class="thumbtext">
           Witfell, a 4D board game
         </div>
-      </a></div>
+      </a>
       <div class="closed" id="witfell">
         <div class="caption">
           Witfell
           (May 2010&ndash;Jul. 2012, group)
         </div>
         <a href="img/witfell.png">
-          <img src="img/witfell.png" class="imgfit">
+          <img alt="" src="img/witfell.png" class="imgfit">
         </a>
       </div>
     </li>
   </ul>
 
   <p class="note small">
-    (updated November 2015)
+    (updated February 2016)
   </p>
 
-  <p class="note small"><tt>
-    <a href="kainino.gpg">2CAC 493D 1FC8 B883 E984</a>
-    <a href="http://www.stwing.upenn.edu/~kainino/kainino.gpg">A26A DA08 7B00 C36A 288F</a>
-  </tt></p>
+  <p id="gpg">
+    <code>
+      2CAC
+      <a href="http://pgp.mit.edu/pks/lookup?op=vindex&search=0xDA087B00C36A288F">
+        493D
+      </a>
+      1FC8
+      <a href="kainino.gpg">
+        B883
+      </a>
+      E984
+      &nbsp;A26A
+      <a href="http://www.stwing.upenn.edu/~kainino/kainino.gpg">
+      DA08
+      </a>
+      7B00
+        C36A
+      288F
+    </code>
+  </p>
 </div>
 </div>
 
