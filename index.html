@@ -120,12 +120,9 @@ img {
   max-height: 100%;
 }
 
-.toggler {
-  cursor: pointer;
-  color: #996600;
-}
-.toggler:hover {
-  text-decoration: underline;
+.toggler:visited {
+  /* should always look unvisited */
+  color: #bb8800;
 }
 
 a:link {
@@ -162,7 +159,11 @@ a:active {
 <h1>Kai Ninomiya</h1>
 
 <p class="note large">
-  &laquo;computer science undergrad/grad &ndash;
+  &laquo;co-instructor &ndash;
+  <a href="http://cis198-2016s.github.io/">
+    CIS 198: Rust</a>&raquo;
+  <br>
+  &laquo;computer science grad student &ndash;
   <a href="http://www.upenn.edu/">
     Penn</a>&raquo;
   <br>
@@ -203,7 +204,7 @@ a:active {
 <div id="aboutbox">
 
 <h2>
-  <a class="toggler" for="#pub">publications</a>
+  <a href class="toggler" for="#pub">publications</a>
 </h2>
 
 <div class="closed" id="pub">
@@ -264,12 +265,12 @@ a:active {
 
   <ul>
     <li>
-      <div class="toggler" for="#deferred">
+      <div><a href class="toggler" for="#deferred">
         <img class="thumb" src="img/thumb/deferred.jpg">
         <div class="thumbtext">
           A WebGL deferred shading renderer
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="deferred">
         <div class="caption">
           <a href="https://github.com/kainino0x/cis565-2015-webgl-deferred-shading">Deferred shading renderer</a>
@@ -281,12 +282,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#rusttrace">
+      <div><a href class="toggler" for="#rusttrace">
         <img class="thumb" src="img/thumb/rusttrace.jpg">
         <div class="thumbtext">
           [Rust] A raytracer with primitive photon mapping
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="rusttrace">
         <div class="caption">
           <a href="https://bitbucket.org/kainino/rusttrace">Rusttrace</a>
@@ -298,12 +299,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#rspt">
+      <div><a href class="toggler" for="#rspt">
         <img class="thumb" src="img/thumb/rspt.jpg">
         <div class="thumbtext">
           [Rust] A very small, very basic path tracer in the style of smallpt
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="rspt">
         <div class="caption">
           <a href="https://github.com/kainino0x/rspt">rspt</a>
@@ -315,12 +316,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#pathtracer">
+      <div><a href class="toggler" for="#pathtracer">
         <img class="thumb" src="img/thumb/pathtracer.jpg">
         <div class="thumbtext">
           [CUDA] A GPU path tracer
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="pathtracer">
         <div class="caption">
           <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">CIS 565 GPU Path Tracer</a>
@@ -332,12 +333,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#smoke">
+      <div><a href class="toggler" for="#smoke">
         <img class="thumb" src="img/thumb/smoke.jpg">
         <div class="thumbtext">
           A smoke simulator/renderer
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="smoke">
         <div class="caption">
           CIS 563 Smoke Simulation
@@ -353,12 +354,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#volumetric">
+      <div><a href class="toggler" for="#volumetric">
         <img class="thumb" src="img/thumb/volumetric.jpg">
         <div class="thumbtext">
           A modular volumetric renderer
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="volumetric">
         <div class="caption">
           CIS 560 Volumetric Renderer
@@ -370,12 +371,12 @@ a:active {
       </div>
     </li>
     <li>
-      <div class="toggler" for="#invincible">
+      <div><a href class="toggler" for="#invincible">
         <img class="thumb" src="img/thumb/invincible.jpg">
         <div class="thumbtext">
           Invincible, a 2D phys-based cave exploration sim
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="invincible">
         <div class="caption">
             <a href="http://www.stwing.upenn.edu/~kainino/invincible/">Invincible (Unity Web Player)</a>
@@ -388,12 +389,12 @@ a:active {
     </li>
     <!--
     <li>
-      <div class="toggler" for="#golshader">
+      <div><a href class="toggler" for="#golshader">
         <img class="thumb" src="img/thumb/golshader.jpg">
         <div class="thumbtext">
             GoLShader, a GLSL Conway's game of life
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="golshader">
         <div class="caption">
           <a href="https://bitbucket.org/kainino/golshader">
@@ -408,12 +409,12 @@ a:active {
     </li>
     -->
     <li>
-      <div class="toggler" for="#chickens">
+      <div><a href class="toggler" for="#chickens">
         <img class="thumb" src="img/thumb/chickens.jpg">
         <div class="thumbtext">
           Chickens, a networked platformer
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="chickens">
         <div class="caption">
           Chickens + the EGGS GL GUI System
@@ -425,12 +426,12 @@ a:active {
       </div>
     </li>
     <li for="#witfell">
-      <div class="toggler" for="#witfell">
+      <div><a href class="toggler" for="#witfell">
         <img class="thumb" src="img/thumb/witfell.jpg">
         <div class="thumbtext">
           Witfell, a 4D board game
         </div>
-      </div>
+      </a></div>
       <div class="closed" id="witfell">
         <div class="caption">
           Witfell
