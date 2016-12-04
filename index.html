@@ -73,6 +73,8 @@ body {
 .avatar {
   display: block;
   margin: auto auto;
+  width: 64px;
+  height: 64px;
   border-radius: 32px;
 }
 
@@ -96,6 +98,10 @@ h3 {
 .note {
   text-align: center;
   font-style: italic;
+}
+
+.center {
+  text-align: center;
 }
 
 .large { font-size: 110%; }
@@ -171,36 +177,50 @@ a:active {
 
 <h1>Kai Ninomiya</h1>
 
-<p class="note large">
-  &laquo;co-instructor &ndash;
-  <a href="http://cis198-2016s.github.io/">
-    CIS 198: Rust</a>&raquo;
+<p class="note large" style="margin-bottom:0px;">
+  &laquo;software engineer, webgl &ndash;
+  <a href="https://www.google.com/chrome/">
+    Google Chrome</a>&raquo;
   <br>
-  &laquo;computer science grad student &ndash;
+  &laquo;alum, computer &amp; information science &ndash;
   <a href="http://www.upenn.edu/">
     Penn</a>&raquo;
   <br>
   &laquo;corresponding sysadmin &ndash;
-  <a href="http://www.stwing.upenn.edu/">
+  <a href="https://www.stwing.upenn.edu/">
     STWing</a> residential program&raquo;
-  <!--
-  &laquo;RCTA research intern &ndash;
-  <a href="http://cg.cis.upenn.edu/current_projects.html">
-    SIG Center for Computer Graphics</a>&raquo;
   <br>
+  &amp; <a href="javascript:;" class="toggler" data-for="#oldjobs">formerly...</a>
+</p>
+<div id="oldjobs" class="note closed">
   &laquo;co-instructor &ndash;
-  <a href="http://seas.upenn.edu/~cis191/">
-    Linux/Unix Skills</a>&raquo;
+  <a href="http://cis198-2016s.github.io/">
+    CIS 198: Rust</a>&raquo;
   <br>
   &laquo;teaching assistant &ndash;
-  <a href="http://www.cis.upenn.edu/~cis277/current/">
-    Interactive Computer Graphics</a>&raquo;
+  <a href="http://cis565-fall-2015.github.io/">
+    CIS 565: GPU Programming</a>&raquo;
   <br>
   &laquo;3d graphics engine developer &ndash;
   <a href="http://www.cesiumjs.org/">
     Cesium.js</a>&raquo;
-  -->
-</p>
+  <br>
+  &laquo;teaching assistant &ndash;
+  <a href="http://www.cis.upenn.edu/~cis277/current/">
+    CIS 277: Interactive Computer Graphics</a>&raquo;
+  <br>
+  &laquo;teaching assistant &ndash;
+  <a href="http://www.cis.upenn.edu/~cis460/current/">
+    CIS 460: Computer Graphics</a>&raquo;
+  <br>
+  &laquo;co-instructor &ndash;
+  <a href="http://seas.upenn.edu/~cis191/">
+    CIS 191: Linux/Unix Skills</a>&raquo;
+  <br>
+  &laquo;RCTA research intern &ndash;
+  <a href="http://cg.cis.upenn.edu/current_projects.html">
+    Center for Human Modeling &amp; Simulation</a>&raquo;
+</div>
 
 <h2>
   <a href="KaiNinomiya_resume.pdf">résumé (pdf)</a>
@@ -215,6 +235,34 @@ a:active {
 </div>
 
 <div id="aboutbox">
+
+<h2>
+  about me
+</h2>
+
+<p>
+  I work full-time on (implementing) WebGL in Google Chrome.
+  My work is open source and easily found online.
+</p>
+<p>
+  I'm super-interested in computer science and physics, especially computer
+  graphics, physical approaches to graphics, computational
+  approaches to physics, and teaching what I know about these things to others.
+</p>
+<p>
+  I also think <a href="https://rust-lang.org/">Rust</a> is hecka cool!
+  I co-taught <a href="http://cis198-2016s.github.io/">a course</a> in it once.
+</p>
+<p>
+  In my limited free time, I like to do things I think are great
+  ('stonishing, I know), such as:
+</p>
+<ul>
+  <li>teaching other people how to do things <em>they</em> think are great,</li>
+  <li>building cool software (see below),</li>
+  <li>building cool physical things,</li>
+  <li>and, occasionally, making things pretty.</li>
+</ul>
 
 <h2>
   <a href="javascript:;" class="toggler" data-for="#pub">publications</a>
@@ -251,299 +299,270 @@ a:active {
   </p>
 </div>
 
-<h2>
-  about me
-</h2>
+<h2>projects</h2>
+<p class="note small">all of this was done in or before college &ndash; most recent first, roughly</p>
 
-<div id="about">
-  <p>
-    I'm super-interested in computer science and physics,
-    especially graphics, hardware design, physical approaches to graphics,
-    and computational approaches to physics.
-  </p>
-  <p>
-    Despite being a very busy college student, I try to spend as much time as I
-    can doing the things I think are awesome, such as:
-  </p>
-  <ul>
-    <li>building cool software (see below),</li>
-    <li>helping other people and teaching them how to do things <em>they</em>
-      (hopefully) think are awesome,</li>
-    <li>building cool physical things,</li>
-    <li>and, occasionally, making things pretty.</li>
-  </ul>
+<p class="center">coursework + other</p>
 
-  <h2>projects</h2>
-  <p style="text-align: center;">coursework + other</p>
-
-  <ul>
-    <!--
-    <li>
-      <a href="https://github.com/kainino0x/rust-vulkan-bind" class="block">
-        <div class="thumb" style="background: #000; width: 96px"></div>
-        <div class="thumbtext">
-          Vulkan bindings for Rust (WIP!) [GitHub]
-        </div>
-      </a>
-    </li>
-      -->
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#deferred">
-        <img alt="" class="thumb" src="img/thumb/deferred.jpg">
-        <div class="thumbtext">
-          [WebGL] Deferred shading renderer
-        </div>
-      </a>
-      <div class="closed" id="deferred">
-        <div class="caption">
-          <a href="https://github.com/kainino0x/cis565-2015-webgl-deferred-shading">Deferred shading renderer</a>
-          (Oct. 2015, created from scratch, to prepare base code as an assignment for CIS 565 students)
-        </div>
-        <a href="http://kainino0x.github.io/cis565-2015-webgl-deferred-shading/">
-          <img alt="" src="img/deferred.jpg" class="imgfit">
-        </a>
+<ul>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#deferred">
+      <img alt="" class="thumb" src="img/thumb/deferred.jpg">
+      <div class="thumbtext">
+        [WebGL] Deferred shading renderer
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#rusttrace">
-        <img alt="" class="thumb" src="img/thumb/rusttrace.jpg">
-        <div class="thumbtext">
-          [Rust] A raytracer with primitive photon mapping
-        </div>
-      </a>
-      <div class="closed" id="rusttrace">
-        <div class="caption">
-          <a href="https://bitbucket.org/kainino/rusttrace">Rusttrace</a>
-          (mostly Summer 2014, pair)
-        </div>
-        <a href="https://bitbucket.org/kainino/rusttrace">
-          <img alt="" src="img/rusttrace.jpg" class="imgfit">
-        </a>
+    </a>
+    <div class="closed" id="deferred">
+      <div class="caption">
+        <a href="https://github.com/kainino0x/cis565-2015-webgl-deferred-shading">Deferred shading renderer</a>
+        (Oct. 2015, created from scratch, to prepare base code as an assignment for CIS 565 students)
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#rspt">
-        <img alt="" class="thumb" src="img/thumb/rspt.jpg">
-        <div class="thumbtext">
-          [Rust] A very small, basic path tracer <em>a la</em> smallpt
-        </div>
+      <a href="http://kainino0x.github.io/cis565-2015-webgl-deferred-shading/">
+        <img alt="" src="img/deferred.jpg" class="imgfit">
       </a>
-      <div class="closed" id="rspt">
-        <div class="caption">
-          <a href="https://github.com/kainino0x/rspt">rspt</a>
-          (Fall 2015, solo)
-        </div>
-        <a href="https://github.com/kainino0x/rspt">
-          <img alt="" src="img/rspt.jpg" class="imgfit">
-        </a>
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#rusttrace">
+      <img alt="" class="thumb" src="img/thumb/rusttrace.jpg">
+      <div class="thumbtext">
+        [Rust] A raytracer with primitive photon mapping
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#fracture">
-        <img alt="" class="thumb" src="img/thumb/fracture.jpg">
-        <div class="thumbtext">
-          [Web<strong>C</strong>L] GPU Dynamic Fracture in the Browser
-        </div>
-      </a>
-      <div class="closed" id="fracture">
-        <div class="caption">
-          <a href="https://github.com/kainino0x/cis565final">GPU Dynamic Fracture in the Browser</a>
-          (Dec. 2014, coursework, pair)
-        </div>
-        <a href="https://github.com/kainino0x/cis565final">
-          <img alt="" src="img/fracture.jpg" class="imgfit">
-        </a>
+    </a>
+    <div class="closed" id="rusttrace">
+      <div class="caption">
+        <a href="https://bitbucket.org/kainino/rusttrace">Rusttrace</a>
+        (mostly Summer 2014, pair)
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#pathtracer">
-        <img alt="" class="thumb" src="img/thumb/pathtracer.jpg">
-        <div class="thumbtext">
-          [CUDA] A GPU-accelerated path tracer
-        </div>
+      <a href="https://bitbucket.org/kainino/rusttrace">
+        <img alt="" src="img/rusttrace.jpg" class="imgfit">
       </a>
-      <div class="closed" id="pathtracer">
-        <div class="caption">
-          <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">GPU Path Tracer</a>
-          (Oct. 2014, coursework, solo)
-        </div>
-        <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">
-          <img alt="" src="img/pathtracer.jpg" class="imgfit">
-        </a>
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#rspt">
+      <img alt="" class="thumb" src="img/thumb/rspt.jpg">
+      <div class="thumbtext">
+        [Rust] A very small, basic path tracer <em>a la</em> smallpt
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#smoke">
-        <img alt="" class="thumb" src="img/thumb/smoke.jpg">
-        <div class="thumbtext">
-          A smoke simulator/renderer
-        </div>
-      </a>
-      <div class="closed" id="smoke">
-        <div class="caption">
-          CIS 563 Smoke Simulation
-          (Mar. 2014, expanded coursework)
-          <br>
-          [videos:
-          <a href="http://www.stwing.upenn.edu/~kainino/smokesim_temp.mp4">initial temperature source</a> (13 MB),
-          <a href="http://www.stwing.upenn.edu/~kainino/smokesim_vel.mp4">initial velocity source</a> (14 MB)]
-        </div>
-        <img alt="" src="img/smoke.jpg" class="imgfit">
+    </a>
+    <div class="closed" id="rspt">
+      <div class="caption">
+        <a href="https://github.com/kainino0x/rspt">rspt</a>
+        (Fall 2015, solo)
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#volumetric">
-        <img alt="" class="thumb" src="img/thumb/volumetric.jpg">
-        <div class="thumbtext">
-          A modular volumetric renderer
-        </div>
+      <a href="https://github.com/kainino0x/rspt">
+        <img alt="" src="img/rspt.jpg" class="imgfit">
       </a>
-      <div class="closed" id="volumetric">
-        <div class="caption">
-          CIS 560 Volumetric Renderer
-          (Oct. 2013, expanded coursework)
-        </div>
-        <img alt="" src="img/volumetric.jpg" class="imgfit">
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#fracture">
+      <img alt="" class="thumb" src="img/thumb/fracture.jpg">
+      <div class="thumbtext">
+        [Web<strong>C</strong>L] GPU Dynamic Fracture in the Browser
       </div>
-    </li>
-    <!--
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#golshader">
-        <img alt="" class="thumb" src="img/thumb/golshader.jpg">
-        <div class="thumbtext">
-            GoLShader, a GLSL Conway's game of life
-        </div>
+    </a>
+    <div class="closed" id="fracture">
+      <div class="caption">
+        <a href="https://github.com/kainino0x/cis565final">GPU Dynamic Fracture in the Browser</a>
+        (Dec. 2014, coursework, pair)
+      </div>
+      <a href="https://github.com/kainino0x/cis565final">
+        <img alt="" src="img/fracture.jpg" class="imgfit">
       </a>
-      <div class="closed" id="golshader">
-        <div class="caption">
-          <a href="https://bitbucket.org/kainino/golshader">
-            GoLShader
-          </a>
-          (Aug.&ndash;Dec. 2012, personal)
-        </div>
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#pathtracer">
+      <img alt="" class="thumb" src="img/thumb/pathtracer.jpg">
+      <div class="thumbtext">
+        [CUDA] A GPU-accelerated path tracer
+      </div>
+    </a>
+    <div class="closed" id="pathtracer">
+      <div class="caption">
+        <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">GPU Path Tracer</a>
+        (Oct. 2014, coursework, solo)
+      </div>
+      <a href="https://github.com/kainino0x/cis565-cuda-path-tracer">
+        <img alt="" src="img/pathtracer.jpg" class="imgfit">
+      </a>
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#smoke">
+      <img alt="" class="thumb" src="img/thumb/smoke.jpg">
+      <div class="thumbtext">
+        A smoke simulator/renderer
+      </div>
+    </a>
+    <div class="closed" id="smoke">
+      <div class="caption">
+        CIS 563 Smoke Simulation
+        (Mar. 2014, expanded coursework)
+        <br>
+        [videos:
+        <a href="http://www.stwing.upenn.edu/~kainino/smokesim_temp.mp4">initial temperature source</a> (13 MB),
+        <a href="http://www.stwing.upenn.edu/~kainino/smokesim_vel.mp4">initial velocity source</a> (14 MB)]
+      </div>
+      <img alt="" src="img/smoke.jpg" class="imgfit">
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#volumetric">
+      <img alt="" class="thumb" src="img/thumb/volumetric.jpg">
+      <div class="thumbtext">
+        A modular volumetric renderer
+      </div>
+    </a>
+    <div class="closed" id="volumetric">
+      <div class="caption">
+        CIS 560 Volumetric Renderer
+        (Oct. 2013, expanded coursework)
+      </div>
+      <img alt="" src="img/volumetric.jpg" class="imgfit">
+    </div>
+  </li>
+  <!--
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#golshader">
+      <img alt="" class="thumb" src="img/thumb/golshader.jpg">
+      <div class="thumbtext">
+          GoLShader, a GLSL Conway's game of life
+      </div>
+    </a>
+    <div class="closed" id="golshader">
+      <div class="caption">
         <a href="https://bitbucket.org/kainino/golshader">
-          <img alt="" src="img/golshader.png" class="imgfit">
+          GoLShader
         </a>
+        (Aug.&ndash;Dec. 2012, personal)
       </div>
-    </li>
-    -->
-  </ul>
-  <p style="text-align: center;">games</p>
-  <ul>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#invincible">
-        <img alt="" class="thumb" src="img/thumb/invincible.jpg">
-        <div class="thumbtext">
-          Invincible 1 &ndash; explore a puzzling cave by taking advantage of disposable labor
-        </div>
+      <a href="https://bitbucket.org/kainino/golshader">
+        <img alt="" src="img/golshader.png" class="imgfit">
       </a>
-      <div class="closed" id="invincible">
-        <div class="caption">
-          Invincible
-          (Mar. 2014, Penn Play Game Jam &ldquo;Exploration&rdquo;, team of 2)
-          <br>
-          <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
-            <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
-        </div>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible/">
-          <img alt="" src="img/invincible.png" class="imgfit">
-        </a>
+    </div>
+  </li>
+  -->
+</ul>
+<p class="center">games</p>
+<ul>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#invincible3">
+      <img alt="" class="thumb" src="img/thumb/invincible3.jpg">
+      <div class="thumbtext">
+        Invincible 3 &ndash; use time-bending powers to fight time-traveling invaders
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#invincible2">
-        <img alt="" class="thumb" src="img/thumb/invincible2.jpg">
-        <div class="thumbtext">
-          Invincible 2 &ndash; help the Capitalosaur escape Kola Superdeep Borehole
-        </div>
-      </a>
-      <div class="closed" id="invincible2">
-        <div class="caption">
-            Invincible 2
-            (Mar. 2015, Penn Play Game Jam &ldquo;Space&rdquo;, team of 3)
-          <br>
-          <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
-            <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
-        </div>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible2/">
-          <img alt="" src="img/invincible2.png" class="imgfit">
-        </a>
-      </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#invincible3">
-        <img alt="" class="thumb" src="img/thumb/invincible3.jpg">
-        <div class="thumbtext">
-          Invincible 3 &ndash; use time-bending powers to fight time-traveling invaders
-        </div>
-      </a>
-      <div class="closed" id="invincible3">
-        <div class="caption">
-          Invincible 3
-          (Mar. 2016, Penn Play Game Jam &ldquo;Time&rdquo;, team of 3)
-          <br>
-          <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
-            <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
-        </div>
+    </a>
+    <div class="closed" id="invincible3">
+      <div class="caption">
+        Invincible 3
+        (Mar. 2016, Penn Play Game Jam &ldquo;Time&rdquo;, team of 3)
+        <br>
         <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
-          <img alt="" src="img/invincible3.jpg" class="imgfit">
-        </a>
+          <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
       </div>
-    </li>
-    <li>
-      <a href="javascript:;" class="toggler block" data-for="#chickens">
-        <img alt="" class="thumb" src="img/thumb/chickens.jpg">
-        <div class="thumbtext">
-          Chickens, a networked platformer
-        </div>
+      <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+        <img alt="" src="img/invincible3.jpg" class="imgfit">
       </a>
-      <div class="closed" id="chickens">
-        <div class="caption">
-          Chickens + the EGGS GL GUI System
-          (Jan. 2011&ndash;Jan. 2014, group)
-        </div>
-        <img alt="" src="img/chickens.png" class="imgfit">
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#invincible2">
+      <img alt="" class="thumb" src="img/thumb/invincible2.jpg">
+      <div class="thumbtext">
+        Invincible 2 &ndash; help the Capitalosaur escape Kola Superdeep Borehole
       </div>
-    </li>
-    <li data-for="#witfell">
-      <a href="javascript:;" class="toggler block" data-for="#witfell">
-        <img alt="" class="thumb" src="img/thumb/witfell.jpg">
-        <div class="thumbtext">
-          Witfell, a 4D board game
-        </div>
+    </a>
+    <div class="closed" id="invincible2">
+      <div class="caption">
+          Invincible 2
+          (Mar. 2015, Penn Play Game Jam &ldquo;Space&rdquo;, team of 3)
+        <br>
+        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+          <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
+      </div>
+      <a href="http://www.stwing.upenn.edu/~kainino/invincible2/">
+        <img alt="" src="img/invincible2.png" class="imgfit">
       </a>
-      <div class="closed" id="witfell">
-        <div class="caption">
-          Witfell
-          (May 2010&ndash;Jul. 2012, group)
-        </div>
-        <img alt="" src="img/witfell.png" class="imgfit">
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#invincible">
+      <img alt="" class="thumb" src="img/thumb/invincible.jpg">
+      <div class="thumbtext">
+        Invincible 1 &ndash; explore a puzzling cave by taking advantage of disposable labor
       </div>
-    </li>
-  </ul>
+    </a>
+    <div class="closed" id="invincible">
+      <div class="caption">
+        Invincible
+        (Mar. 2014, Penn Play Game Jam &ldquo;Exploration&rdquo;, team of 2)
+        <br>
+        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+          <strong>Play now!</strong> Using Unity WebGL (Google Chrome recommended).</a>
+      </div>
+      <a href="http://www.stwing.upenn.edu/~kainino/invincible/">
+        <img alt="" src="img/invincible.png" class="imgfit">
+      </a>
+    </div>
+  </li>
+  <li>
+    <a href="javascript:;" class="toggler block" data-for="#chickens">
+      <img alt="" class="thumb" src="img/thumb/chickens.jpg">
+      <div class="thumbtext">
+        Chickens, a networked platformer
+      </div>
+    </a>
+    <div class="closed" id="chickens">
+      <div class="caption">
+        Chickens + the EGGS GL GUI System
+        (Jan. 2011&ndash;Jan. 2014, group)
+      </div>
+      <img alt="" src="img/chickens.png" class="imgfit">
+    </div>
+  </li>
+  <li data-for="#witfell">
+    <a href="javascript:;" class="toggler block" data-for="#witfell">
+      <img alt="" class="thumb" src="img/thumb/witfell.jpg">
+      <div class="thumbtext">
+        Witfell, a 4D board game
+      </div>
+    </a>
+    <div class="closed" id="witfell">
+      <div class="caption">
+        Witfell
+        (May 2010&ndash;Jul. 2012, group)
+      </div>
+      <img alt="" src="img/witfell.png" class="imgfit">
+    </div>
+  </li>
+</ul>
 
-  <p class="note small">
-    (updated April 2016)
-  </p>
+<p class="note small">
+  (updated December 2016)
+</p>
 
-  <p id="gpg">
-    <code>
-      2CAC
-      <a href="http://pgp.mit.edu/pks/lookup?op=vindex&search=0xDA087B00C36A288F">
-        493D</a>
-      1FC8
-      <a href="kainino.gpg">
-        B883</a>
-      E984
-      &nbsp;A26A
-      <a href="http://www.stwing.upenn.edu/~kainino/kainino.gpg">
-        DA08</a>
-      7B00
+<p id="gpg">
+  <code>
+    2CAC
+    <a href="http://pgp.mit.edu/pks/lookup?op=vindex&search=0xDA087B00C36A288F">
+      493D</a>
+    1FC8
+    <a href="kainino.gpg">
+      B883</a>
+    E984
+    &nbsp;A26A
+    <a href="http://www.stwing.upenn.edu/~kainino/kainino.gpg">
+      DA08</a>
+    7B00
+    <a href="data:text/plain;charset=utf-8;base64,c29ycnksIHRoaXMgb25lIGRvZXNuJ3QgYWN0dWFsbHkgbGluayBhbnl3aGVyZS4=">
       C36A
-      288F
-    </code>
-  </p>
-</div>
+    </a>
+    288F
+  </code>
+</p>
 </div>
 
 </div>
