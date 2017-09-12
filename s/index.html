@@ -18,10 +18,10 @@ html, body {
 </style>
 
 <script>
-let base = "http://www.stwing.upenn.edu/~kainino/";
-let frame = document.getElementById("frame");
-
 window.onhashchange = () => {
+  let base = "http://www.stwing.upenn.edu/~kainino/";
+  let frame = document.getElementById("frame");
+
   let path = window.location.hash.substring(1);
   frame.url = base + path;
   console.log(frame.url);
