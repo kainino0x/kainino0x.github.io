@@ -4,32 +4,50 @@
 <title>~kainino</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <style type="text/css">
-html, body {
-  margin: 0;
-  padding: 0;
+html {
   height: 100%;
 }
-
-#frame {
+#fscontainer {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#fscontainer iframe {
   width: 100%;
   height: 100%;
 }
 </style>
+</head>
+<body>
+  <div id="fscontainer"></div>
+
+  normal content
+</body>
 
 <script>
-window.onhashchange = () => {
-  let base = "http://www.stwing.upenn.edu/~kainino/";
-  let frame = document.getElementById("frame");
+let container = $("#fscontainer");
+let base = "http://www.stwing.upenn.edu/~kainino/";
 
+window.onhashchange = () => {
   let path = window.location.hash.substring(1);
-  frame.url = base + path;
-  console.log(frame.url);
+  if (path.charAt(0) !== '/') {
+    return;
+  }
+
+  container.show();
+  container.empty();
+  let frame = $("<iframe>");
+  frame.attr("src", base + path);
+  container.append(frame);
 }
 
+window.onhashchange();
 </script>
-</head>
-<body onload="window.onhashchange()">
-  <iframe id="frame" src=""></iframe>
-</body>
 </html>
