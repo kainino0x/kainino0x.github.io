@@ -18,6 +18,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 <script>
+  window.onhashchange = function() {
+    /* fullscreen stwing/~kainino "proxy" */
+    let path = window.location.hash.substring(1);
+    if (path.charAt(0) !== '/') {
+      return;
+    }
+
+    let fscontainer = $("#fscontainer");
+    let base = "http://www.stwing.upenn.edu/~kainino/";
+    fscontainer.show();
+    fscontainer.empty();
+    let frame = $("<iframe>");
+    frame.attr("src", base + path);
+    fscontainer.append(frame);
+  }
+
   $(document).ready(function() {
     $('.closed').hide();
 
@@ -27,11 +43,14 @@
       $(tgt).toggle('blind');
       return false;
     });
+
+    window.onhashchange();
   });
 </script>
 
 <style type="text/css">
 html {
+  height: 100%;
   background-color: #1166bb;
   margin: 0em;
   padding: 1em 0em;
@@ -163,10 +182,27 @@ a:active {
   font-weight: 400;
   color: rgba(0, 0, 0, 1.0);
 }
+
+/* fullscreen stwing/~kainino "proxy" */
+#fscontainer {
+  display: none;
+  position: fixed;
+  background: white;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#fscontainer iframe {
+  width: 100%;
+  height: 100%;
+}
 </style>
 </head>
 
 <body>
+<div id="fscontainer"><!--fullscreen stwing/~kainino "proxy"--></div>
+
 <div id="main">
 
 <div id="bgimgbox">
