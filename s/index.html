@@ -16,9 +16,6 @@ html, body {
   height: 100%;
 }
 </style>
-</head>
-<body>
-<iframe id="frame" src=""></iframe>
 
 <script>
 let base = "http://www.stwing.upenn.edu/~kainino/";
@@ -30,7 +27,9 @@ window.onhashchange = () => {
   console.log(frame.url);
 }
 
-window.onhashchange();
 </script>
+</head>
+<body onload="window.onhashchange()">
+  <iframe id="frame" src=""></iframe>
 </body>
 </html>
