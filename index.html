@@ -624,7 +624,7 @@ a:active {
     fscontainer.innerHTML = '';
     const frame = document.createElement('iframe');
     frame.setAttribute('src', base + path);
-    fscontainer.append(frame);
+    fscontainer.appendChild(frame);
   }
 
   function forClass(classname, fn) {
