@@ -118,7 +118,7 @@
       Systems</em>, Hamburg (Germany), 2015.
   </p>
   <p style="text-align: right;">
-    [<a href="http://www.stwing.upenn.edu/~kainino/DepthPanorama.pdf">preprint</a>, 4.0 MB]
+    [<a href="#/DepthPanorama.pdf">preprint</a>, 4.0 MB]
   </p>
   <p class="light">
     <span class="dark">Ninomiya, K.</span>, Kapadia, M., Shoulson, A., Garcia, F., and Badler, N.
@@ -127,7 +127,7 @@
     <em>Computer Animation and Virtual Worlds</em>, 26: 119–139, 2015.
   </p>
   <p style="text-align: right;">
-    [<a href="http://www.stwing.upenn.edu/~kainino/PlanningApproaches.pdf">preprint</a>, 7.1 MB]
+    [<a href="#/PlanningApproaches.pdf">preprint</a>, 7.1 MB]
     [doi: <a href="http://dx.doi.org/10.1002/cav.1622">10.1002/cav.1622</a>]
   </p>
   <p class="light">
@@ -136,8 +136,8 @@
     <em>ACM SIGGRAPH Conference on Motion in Games</em>, Dublin (Ireland), 2013.
   </p>
   <p style="text-align: right;">
-    [<a href="http://www.stwing.upenn.edu/~kainino/ConstraintAwareNavigation.pdf">paper</a>, 2.9 MB]
-    [<a href="http://www.stwing.upenn.edu/~kainino/ConstraintAwareNavigation.mp4">video</a>, 4:49, 30 MB]
+    [<a href="#/ConstraintAwareNavigation.pdf">paper</a>, 2.9 MB]
+    [<a href="#/ConstraintAwareNavigation.mp4">video</a>, 4:49, 30 MB]
   </p>
 </div>
 
@@ -255,8 +255,8 @@
         (Mar. 2014, expanded coursework)
         <br>
         [videos:
-        <a href="http://www.stwing.upenn.edu/~kainino/smokesim_temp.mp4">initial temperature source</a> (13 MB),
-        <a href="http://www.stwing.upenn.edu/~kainino/smokesim_vel.mp4">initial velocity source</a> (14 MB)]
+        <a href="#/smokesim_temp.mp4">initial temperature source</a> (13 MB),
+        <a href="#/smokesim_vel.mp4">initial velocity source</a> (14 MB)]
       </div>
       <p>
         <img alt data-src="img/smoke.jpg" class="projimg">
@@ -318,11 +318,11 @@
         Invincible 3
         (Mar. 2016, Penn Play Game Jam &ldquo;Time&rdquo;, team of 3)
         <br>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+        <a href="#/invincible3/">
           <strong>Play now!</strong> using WebGL.</a>
       </div>
       <p>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+        <a href="#/invincible3/">
           <img alt style="height:270px" data-src="img/invincible3.jpg" class="projimg">
         </a>
       </p>
@@ -340,11 +340,11 @@
           Invincible 2
           (Mar. 2015, Penn Play Game Jam &ldquo;Space&rdquo;, team of 3)
         <br>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+        <a href="#/invincible2/">
           <strong>Play now!</strong> using WebGL.</a>
       </div>
       <p>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible2/">
+        <a href="#/invincible2/">
           <img alt style="height:270px" data-src="img/invincible2.png" class="projimg">
         </a>
       </p>
@@ -362,11 +362,11 @@
         Invincible
         (Mar. 2014, Penn Play Game Jam &ldquo;Exploration&rdquo;, team of 2)
         <br>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible3/">
+        <a href="#/invincible/">
           <strong>Play now!</strong> using WebGL.</a>
       </div>
       <p>
-        <a href="http://www.stwing.upenn.edu/~kainino/invincible/">
+        <a href="#/invincible/">
           <img alt data-src="img/invincible.png" class="projimg">
         </a>
       </p>
@@ -607,19 +607,23 @@ a:active {
 
 <!--[if gte IE 9]-->
 <script>
+  const fscontainer = document.getElementById('fscontainer');
+  const base = 'http://www.stwing.upenn.edu/~kainino/';
   window.onhashchange = function() {
     /* fullscreen stwing/~kainino "proxy" */
     const path = window.location.hash.substring(1);
     if (path.charAt(0) !== '/') {
+      fscontainer.style.display = 'none';
+      fscontainer.innerHTML = '';
+      document.body.style.overflow = 'scroll';
       return;
     }
 
-    const fscontainer = document.getElementById('fscontainer');
-    const base = 'http://www.stwing.upenn.edu/~kainino/';
-    fscontainer.show();
-    fscontainer.empty();
+    document.body.style.overflow = 'hidden';
+    fscontainer.style.display = 'block';
+    fscontainer.innerHTML = '';
     const frame = document.createElement('iframe');
-    frame.attr('src', base + path);
+    frame.setAttribute('src', base + path);
     fscontainer.append(frame);
   }
 
